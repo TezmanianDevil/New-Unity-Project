@@ -6,6 +6,9 @@ TagManager:
   tags:
   - PickUp
   - New tag
+  - Enemy
+  - Background
+  - RoadBlock
   layers:
   - Default
   - TransparentFX
@@ -43,15 +46,15 @@ TagManager:
   - name: background
     uniqueID: 2442381045
     locked: 0
-  - name: pickup
-    uniqueID: 3927113081
-    locked: 0
-  - name: player
-    uniqueID: 417550027
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer
-    uniqueID: 738840705
+  - name: pickup
+    uniqueID: 3927113081
+    locked: 0
+  - name: enemy
+    uniqueID: 1157739743
+    locked: 0
+  - name: player
+    uniqueID: 417550027
     locked: 0

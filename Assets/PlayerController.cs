@@ -35,13 +35,33 @@ public class PlayerController : MonoBehaviour
             SetCountText();
         }
     }
-           void SetCountText()
+    void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 12)
+        if (count >= 20)
         {
             winText.text = "You win!";
 
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pick Up"))
+        {
+            other.gameObject.SetActive(false);
+            count = count + 1;
+            SetCountText();
+        }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.SetActive(false);
+            count = count - 1;
+            SetCountText();
+
+            if (count == 12) 
+{
+    transform.position = new Vector2(53.8f, -2.6f); 
+}
         }
     }
 
